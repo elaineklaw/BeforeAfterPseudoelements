@@ -1,0 +1,31 @@
+main {
+  padding: 30px;
+}
+
+blockquote {
+  max-width: 300px;
+}
+
+blockquote + .author {
+  margin-bottom: 60px;
+}
+
+.author {
+  color: grey;
+  font-style: italic;
+}
+/*ruleset that surrounds <blockquote>s in smart quotes (i.e, curly quotation marks). This means that any time a <blockquote> element appears, without putting quotation characters in your HTML, the block quote should get quotes before and after it. */
+
+
+blockquote::before {
+  content: "“";
+}
+
+blockquote::after {
+  content: "”";
+}
+/*ruleset for the .author class that puts an en dash (–) before it (you can see how we're using it in the HTML in this drill).*/
+.author::before {
+  content: "–";
+  margin-right: 5px;
+}
